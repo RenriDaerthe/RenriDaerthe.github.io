@@ -11,21 +11,39 @@
     }
 
     .background {
-      background: linear-gradient(-45deg, #f3e5f5, #e3f2fd, #fff3e0, #fce4ec);
-      background-size: 400% 400%;
-      animation: gradientBG 15s ease infinite;
+      background: linear-gradient(to bottom, #b3e5fc 0%, #e0f7fa 30%, #c8e6c9 100%);
+      background-attachment: fixed;
       min-height: 100vh;
       padding: 40px 20px;
       font-family: Arial, sans-serif;
       color: #222;
       max-width: 800px;
       margin: auto;
+      position: relative;
+      overflow: hidden;
     }
 
-    @keyframes gradientBG {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
+    .cloud {
+      background: url('https://www.transparenttextures.com/patterns/clouds.png');
+      opacity: 0.25;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 300%;
+      height: 100%;
+      background-size: contain;
+      animation: drift 90s linear infinite;
+      z-index: 0;
+    }
+
+    @keyframes drift {
+      from { transform: translateX(0); }
+      to { transform: translateX(-66.66%); }
+    }
+
+    .background > * {
+      position: relative;
+      z-index: 1;
     }
 
     h1 {
@@ -144,6 +162,8 @@
 </head>
 <body>
   <div class="background">
+    <div class="cloud"></div>
+
     <h1>Welcome to my ePortfolio</h1>
     <div class="subtitle">Glad you're here</div>
 
@@ -219,4 +239,14 @@
         and persistent data storage outside of the mobile device.
       </p>
 
-      <h3>🎯 Alignment with Course Outcomes</h3
+      <h3>🎯 Alignment with Course Outcomes</h3>
+      <ul>
+        <li>Applied modern object-oriented principles through Kotlin conversion.</li>
+        <li>Utilized Jetpack Compose to design and implement a responsive UI.</li>
+        <li>Built and connected a secure backend to demonstrate full-stack development capabilities.</li>
+        <li>Incorporated state management and data handling within both frontend and backend systems.</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
