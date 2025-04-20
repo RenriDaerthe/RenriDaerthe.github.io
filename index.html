@@ -3,15 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My ePortfolio</title>
+  <title>My ePortfolio Park Edition</title>
   <style>
     body {
       margin: 0;
       padding: 0;
       background: linear-gradient(to bottom, #b3e5fc 0%, #e0f7fa 30%, #c8e6c9 100%);
-      background-attachment: fixed;
       font-family: Arial, sans-serif;
       color: #222;
+      overflow-x: hidden;
+    }
+
+    .sun {
+      position: fixed;
+      top: 40px;
+      left: 40px;
+      width: 100px;
+      height: 100px;
+      background: radial-gradient(circle, #ffeb3b, #fdd835);
+      border-radius: 50%;
+      box-shadow: 0 0 60px #fff176;
+      z-index: 1;
     }
 
     .cloud {
@@ -32,9 +44,28 @@
       to { transform: translateX(-66.66%); }
     }
 
+    .grass {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 120px;
+      background: linear-gradient(to top, #388e3c 30%, #81c784 90%);
+      border-top: 3px solid #2e7d32;
+      z-index: 1;
+    }
+
+    .playground {
+      position: fixed;
+      bottom: 30px;
+      right: 40px;
+      font-size: 40px;
+      z-index: 2;
+    }
+
     .content {
       position: relative;
-      z-index: 1;
+      z-index: 2;
       max-width: 800px;
       margin: auto;
       padding: 40px 20px;
@@ -155,7 +186,14 @@
   </style>
 </head>
 <body>
+
+  <!-- ☀️ Sun -->
+  <div class="sun"></div>
+
+  <!-- ☁️ Drifting Clouds -->
   <div class="cloud"></div>
+
+  <!-- 📄 Main Content -->
   <div class="content">
 
     <h1>Welcome to my ePortfolio</h1>
@@ -242,5 +280,9 @@
       </ul>
     </div>
   </div>
+
+  <!-- 🌱 Grass & Playground -->
+  <div class="grass"></div>
+  <div class="playground">🛝</div>
 </body>
 </html>
