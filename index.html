@@ -6,12 +6,26 @@
   <title>My ePortfolio</title>
   <style>
     body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .background {
+      background: linear-gradient(-45deg, #f3e5f5, #e3f2fd, #fff3e0, #fce4ec);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      min-height: 100vh;
+      padding: 40px 20px;
       font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
       color: #222;
       max-width: 800px;
       margin: auto;
-      padding: 40px 20px;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
 
     h1 {
@@ -40,195 +54,169 @@
     }
 
     .myName {
-  font-size: 18px;
-  line-height: 1.6;
-  color: #222;
-  background-color: #f3e5f5; /* Light purple */
-  padding: 10px 15px;
-  border-left: 5px solid #ab47bc; /* A deeper purple */
-  border-radius: 8px;
-  display: inline-block;
-}
-
+      font-size: 18px;
+      line-height: 1.6;
+      color: #222;
+      background-color: #f3e5f5;
+      padding: 10px 15px;
+      border-left: 5px solid #ab47bc;
+      border-radius: 8px;
+      display: inline-block;
+    }
 
     .BioExplanation {
-  font-size: 17px;
-  line-height: 1.7;
-  color: #333;
-  background-color: #fff8e1;
-  padding: 15px;
-  border-left: 5px solid #ff9800;
-  border-radius: 8px;
-}
+      font-size: 17px;
+      line-height: 1.7;
+      color: #333;
+      background-color: #fff8e1;
+      padding: 15px;
+      border-left: 5px solid #ff9800;
+      border-radius: 8px;
+    }
 
+    .YTlink {
+      background-color: #ffe5e5;
+      color: #222;
+      font-size: 17px;
+      line-height: 1.7;
+      padding: 15px;
+      border-left: 5px solid #ff0000;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
 
-.YTlink {
-  background-color: #ffe5e5; /* Light red-pink background */
-  color: #222;
-  font-size: 17px;
-  line-height: 1.7;
-  padding: 15px;
-  border-left: 5px solid #ff0000; /* YouTube red accent */
-  border-radius: 8px;
-  margin-bottom: 20px;
-}
+    .YTlink a {
+      display: block;
+      margin-top: 8px;
+      color: #d32f2f;
+      font-weight: bold;
+      text-decoration: none;
+    }
 
-.YTlink a {
-  display: block;
-  margin-top: 8px;
-  color: #d32f2f;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.YTlink a:hover {
-  text-decoration: underline;
-}
-
+    .YTlink a:hover {
+      text-decoration: underline;
+    }
 
     .CodeJourney {
-  font-size: 17px;
-  line-height: 1.7;
-  color: #333;
-  background-color: #e1f5fe;
-  padding: 15px;
-  border-left: 5px solid #039be5;
-  border-radius: 8px;
-  margin-bottom: 20px;
-}
-.CodeJourney a {
-  display: block;
-  margin-top: 8px;
-  color: #0277bd;
-  font-weight: bold;
-  text-decoration: none;
-}
-.CodeJourney a:hover {
-  text-decoration: underline;
-}
+      font-size: 17px;
+      line-height: 1.7;
+      color: #333;
+      background-color: #e1f5fe;
+      padding: 15px;
+      border-left: 5px solid #039be5;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
 
-.ReflectionBox {
-  background-color: #e7f6ec;
-  padding: 20px;
-  border-left: 5px solid #43a047;
-  border-radius: 8px;
-  margin-bottom: 40px;
-  color: #333;
-}
+    .CodeJourney a {
+      display: block;
+      margin-top: 8px;
+      color: #0277bd;
+      font-weight: bold;
+      text-decoration: none;
+    }
 
-.ReflectionBox h3 {
-  margin-top: 25px;
-  color: #333;
-}
+    .CodeJourney a:hover {
+      text-decoration: underline;
+    }
 
-.ReflectionBox ul {
-  padding-left: 20px;
-  margin-top: 15px;
-  color: #444;
-  line-height: 1.6;
-}
+    .ReflectionBox {
+      background-color: #e7f6ec;
+      padding: 20px;
+      border-left: 5px solid #43a047;
+      border-radius: 8px;
+      margin-bottom: 40px;
+      color: #333;
+    }
 
+    .ReflectionBox h3 {
+      margin-top: 25px;
+      color: #333;
+    }
 
-
+    .ReflectionBox ul {
+      padding-left: 20px;
+      margin-top: 15px;
+      color: #444;
+      line-height: 1.6;
+    }
   </style>
 </head>
 <body>
+  <div class="background">
+    <h1>Welcome to my ePortfolio</h1>
+    <div class="subtitle">Glad you're here</div>
 
-  <h1>Welcome to my ePortfolio</h1>
-  <div class="subtitle">Glad you're here</div>
+    <h2>Name</h2>
+    <p class="myName">Pedro Garcia Marrufo</p>
 
+    <h2>Professional Self-Assessment</h2>
+    <p class="BioExplanation">
+      When I first began my journey at SNHU, I had a basic understanding of coding and experience primarily in Java. Through my coursework and project work, I developed skills in languages such as C++, Python, and Kotlin, while also gaining hands-on experience in software engineering principles, data structures, and security fundamentals.<br><br>
 
+      Throughout the program, I had the opportunity to modulate assignments that simulated real-world team dynamics. These experiences taught me how to contribute effectively in a team environment, navigate shared responsibilities, and communicate clearly during development cycles.<br><br>
 
-  <h2>Name</h2>
-  <p class="myName">Pedro Garcia Marrufo</p>
+      I also learned how to communicate effectively with both technical and non-technical stakeholders. I was asked to present my work and defend my design choices, which helped me build confidence in articulating complex ideas to a diverse audience.<br><br>
 
+      The core project showcased in this portfolio began in CS360 as an event tracker app written in Java. To better reflect my current abilities, I re-engineered this application in Kotlin using Jetpack Compose, added responsive UI, and incorporated a Go-based backend to securely handle user authentication. This progression highlights my mastery of modern mobile development, backend integration, and secure database practices.<br><br>
 
+      Outside of this artifact, I’ve also explored cybersecurity principles and basic penetration testing in elective coursework, which has deepened my appreciation for secure design and ethical development practices.<br><br>
 
-<h2>Professional Self-Assessment</h2>
-<p class="BioExplanation">
-  When I first began my journey at SNHU, I had a basic understanding of coding and experience primarily in Java. Through my coursework and project work, I developed skills in languages such as C++, Python, and Kotlin, while also gaining hands-on experience in software engineering principles, data structures, and security fundamentals.<br><br>
+      Together, the artifacts in this portfolio demonstrate a well-rounded technical foundation from front-end design to back-end architecture and illustrate my ability to learn, adapt, and contribute meaningfully in the computer science field. They represent not only the skills I've built, but also the values I bring as a developer: collaboration, clarity, continuous learning, and user-focused design.
+    </p>
 
-  Throughout the program, I had the opportunity to modulate assignments that simulated real-world team dynamics. These experiences taught me how to contribute effectively in a team environment, navigate shared responsibilities, and communicate clearly during development cycles.<br><br>
+    <h2>Code Review Video</h2>
+    <div class="YTlink">
+      My code review for my GeminiAiFitness app:
+      <a href="https://youtu.be/yiFVQXWZebQ" target="_blank">
+        ▶️ Watch on YouTube
+      </a>
+    </div>
 
-  I also learned how to communicate effectively with both technical and non-technical stakeholders. I was asked to present my work and defend my design choices, which helped me build confidence in articulating complex ideas to a diverse audience.<br><br>
+    <h2>Original Artifact into New Artifact</h2>
+    <div class="CodeJourney">
+      <p>
+        Here we have my original project.<br>
+        It originally began as an Event Tracker app and eventually evolved into a fully functional fitness app called <strong>GeminiAiFitness</strong>.<br>
+        Below, you'll find links to the progression of this project — from the initial version to the complete fitness app, as well as the Go backend that supports it.
+      </p>
 
-  The core project showcased in this portfolio began in CS360 as an event tracker app written in Java. To better reflect my current abilities, I re-engineered this application in Kotlin using Jetpack Compose, added responsive UI, and incorporated a Go-based backend to securely handle user authentication. This progression highlights my mastery of modern mobile development, backend integration, and secure database practices.<br><br>
+      <a href="https://github.com/RenriDaerthe/EventTrackerApp" target="_blank">
+        📁 Event Tracker View on GitHub
+      </a>
+      <a href="https://github.com/RenriDaerthe/GeminiAiFitness" target="_blank">
+        📁 GeminiAiFitness View on GitHub
+      </a>
+      <a href="https://github.com/RenriDaerthe/GoBackend" target="_blank">
+        🗄️ GeminiAiFitness Database (Go Backend) on GitHub
+      </a>
+    </div>
 
-  Outside of this artifact, I’ve also explored cybersecurity principles and basic penetration testing in elective coursework, which has deepened my appreciation for secure design and ethical development practices.<br><br>
+    <h2>Artifact Reflection</h2>
+    <div class="ReflectionBox">
+      <p>
+        In this project, I applied several enhancements that reflect both technical growth and alignment with key course outcomes.
+        These improvements showcase my ability to adapt to modern development practices, implement responsive UI, and integrate full-stack components.
+      </p>
 
-  Together, the artifacts in this portfolio demonstrate a well-rounded technical foundation from front-end design to back-end architecture and illustrate my ability to learn, adapt, and contribute meaningfully in the computer science field. They represent not only the skills I've built, but also the values I bring as a developer: collaboration, clarity, continuous learning, and user-focused design.
-</p>
+      <h3>🔄 Rewriting the App from Java to Kotlin</h3>
+      <p>
+        I refactored the original Java-based Event Tracker into a Kotlin-based application.
+        This shift improved code clarity, reduced boilerplate, and aligned with contemporary Android development practices.
+      </p>
 
-  
-  <h2>Code Review Video</h2>
-<div class="YTlink">
-  My code review for my GeminiAiFitness app:
-  <a href="https://youtu.be/yiFVQXWZebQ" target="_blank">
-    ▶️ Watch on YouTube
-  </a>
-</div>
+      <h3>🎨 Enhanced UI with Jetpack Compose</h3>
+      <p>
+        By adopting Jetpack Compose, I was able to build a modern, fluid, and reactive interface.
+        Compose allowed for faster UI development and a more intuitive experience for users,
+        especially when navigating between features like the calendar and workout settings.
+      </p>
 
+      <h3>🗄️ Backend & Database Integration Using Go</h3>
+      <p>
+        I implemented a Go-based backend with a custom database to securely handle user registration and login.
+        This integration demonstrated my understanding of RESTful API design, backend logic,
+        and persistent data storage outside of the mobile device.
+      </p>
 
-
-
-<h2>Original Artifact into New Artifact</h2>
-<div class="CodeJourney">
-  <p>
-    Here we have my original project.<br>
-    It originally began as an Event Tracker app and eventually evolved into a fully functional fitness app called <strong>GeminiAiFitness</strong>.<br>
-    Below, you'll find links to the progression of this project — from the initial version to the complete fitness app, as well as the Go backend that supports it.
-  </p>
-
-  <a href="https://github.com/RenriDaerthe/EventTrackerApp" target="_blank">
-    📁 Event Tracker View on GitHub
-  </a>
-  <a href="https://github.com/RenriDaerthe/GeminiAiFitness" target="_blank">
-    📁 GeminiAiFitness View on GitHub
-  </a>
-  <a href="https://github.com/RenriDaerthe/GoBackend" target="_blank">
-    🗄️ GeminiAiFitness Database (Go Backend) on GitHub
-  </a>
-</div>
-
-
-
-
-<h2>Artifact Reflection</h2>
-<div class="ReflectionBox">
-
-  <p>
-    In this project, I applied several enhancements that reflect both technical growth and alignment with key course outcomes.
-    These improvements showcase my ability to adapt to modern development practices, implement responsive UI, and integrate full-stack components.
-  </p>
-
-  <h3>🔄 Rewriting the App from Java to Kotlin</h3>
-  <p>
-    I refactored the original Java-based Event Tracker into a Kotlin-based application.
-    This shift improved code clarity, reduced boilerplate, and aligned with contemporary Android development practices.
-  </p>
-
-  <h3>🎨 Enhanced UI with Jetpack Compose</h3>
-  <p>
-    By adopting Jetpack Compose, I was able to build a modern, fluid, and reactive interface.
-    Compose allowed for faster UI development and a more intuitive experience for users,
-    especially when navigating between features like the calendar and workout settings.
-  </p>
-
-  <h3>🗄️ Backend & Database Integration Using Go</h3>
-  <p>
-    I implemented a Go-based backend with a custom database to securely handle user registration and login.
-    This integration demonstrated my understanding of RESTful API design, backend logic,
-    and persistent data storage outside of the mobile device.
-  </p>
-
-  <h3>🎯 Alignment with Course Outcomes</h3>
-  <ul>
-    <li>Applied modern object-oriented principles through Kotlin conversion.</li>
-    <li>Utilized Jetpack Compose to design and implement a responsive UI.</li>
-    <li>Built and connected a secure backend to demonstrate full-stack development capabilities.</li>
-    <li>Incorporated state management and data handling within both frontend and backend systems.</li>
-  </ul>
-
-</div>
-</body>
-</html>
+      <h3>🎯 Alignment with Course Outcomes</h3
